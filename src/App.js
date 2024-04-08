@@ -1,23 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import { Nav } from './components/Nav';
+import { Photos } from './components/Photos';
+import { Amenties } from './components/Amenties';
+import { Calender } from './components/Calender';
+import { Card } from './components/Card';
+import { Detail } from './components/Detail';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+     <Nav/>
+     <div className=' flex flex-col mx-auto w-[80%] justify-center font-display'>
+     <Photos/>
+
+     <div className='flex  '>
+<div className='flex flex-col'>
+     <Detail/>
+     <Amenties/>
+     <Calender/>
+     </div>
+     <Card/>
+
+     </div>
+     </div>
     </div>
   );
 }
